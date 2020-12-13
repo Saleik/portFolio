@@ -5,7 +5,7 @@ import { MadeWith } from './MadeWith'
 import { SocialNetwork } from './SocialNetwork'
 
 const CstDiv = styled.div`
-        position: absolute;
+      position: absolute;
         left: 50%;
         transform: translateX(-50%);
         bottom: 0;

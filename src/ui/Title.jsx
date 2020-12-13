@@ -11,7 +11,7 @@ export function Title({ color = "black", children }) {
   return <CstH1 color={color}>{children}</CstH1>
 }
 
-Title.prototype = {
+Title.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string
 }

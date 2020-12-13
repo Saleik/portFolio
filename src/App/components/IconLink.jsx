@@ -17,7 +17,7 @@ export function IconLink({ name, link, hoverColor = 'white', size = "1rem" }) {
     </a>
 }
 
-IconLink.prototype = {
+IconLink.propTypes = {
     name: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     hoverColor: PropTypes.string,

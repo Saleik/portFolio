@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Header } from './components/Header.jsx'
+import { Nav } from '../ui/Nav.jsx'
 import { bgQuiSuisJe, colorsTheme } from '../ui/colorsTheme'
 import { Section } from '../ui/Section'
 import { Div } from '../ui/Div'
@@ -21,7 +21,7 @@ const CstH4 = styled.h4`
     `
 export const QuiSuisJe = () => {
     return <Section background={bgQuiSuisJe}>
-        <Header />
+        <Nav />
         <div className="container">
             <CstDiv className="w-75">
                 <CstH4>Hi! I'm Kevin and i'm french junior Front-end Developer!</CstH4>
