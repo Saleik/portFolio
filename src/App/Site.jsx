@@ -5,9 +5,9 @@ import { Contact } from './Contact';
 
 
 export function Site() {
-    return <div>
+    return <>
         <QuiSuisJe />
         <Competences />
         <Contact />
-    </div>
+    </>
 }

@@ -1,14 +1,34 @@
 @font-face {
     font-family: 'Dosis';
     src: local('/src/fonts/Dosis-Regular.ttf') format('ttf');
-    font-weight: 400;
 
-    font-family: 'Oswald-regular';
-    src: local('/src/fonts/Oswald-Regular.ttf') format('tff');
-    font-weight: 400;
+    font-family: 'Oswald-bold';
+    src: local('/src/fonts/Oswald-VariableFont_wght.ttf') format('tff');
+
+    font-family: 'Hammersmith';
+    src: local('/src/fonts/hammersmithone-regular-webfont.woff') format('woff');
 }
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+html {
+    height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    text-size-adjust: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#g-recaptcha {
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-left: 1px solid lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ecb159;
 }

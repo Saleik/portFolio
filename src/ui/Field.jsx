@@ -12,12 +12,12 @@ const CstTextArea = styled.textarea`
         border-color: lightgray;
         resize: none;`
 
-export function Field({ children, name, type, rows = "5" }) {
+export function Field({ children, name, type, rows = "5", ...props }) {
     return <div className="form-group">
         {children && <CstLabel htmlFor={name}>{children}</CstLabel>}
         {type === 'textarea' ?
-            <CstTextArea name={name} rows={rows} className="from-control w-100"></CstTextArea> :
-            <input className="form-control" type={type} name={name} />}
+            <CstTextArea name={name} rows={rows} className="from-control w-100" {...props}></CstTextArea> :
+            <input className="form-control" type={type} name={name} {...props} />}
     </div>
 }
 

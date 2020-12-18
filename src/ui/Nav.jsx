@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Button } from './Button'
 
 const CstNav = styled.nav`
-    border-bottom: .1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     box-shadow: 0px 1px 2px lightgray;`
 
 export function Nav({ brand = "test" }) {
@@ -14,10 +14,10 @@ export function Nav({ brand = "test" }) {
                 {brand}
             </h4>
         </a>
-        <Button href="#contact">Dite Bonjour!</Button>
+        <a href="#contact"><Button>Dite Bonjour</Button></a>
     </CstNav>
 }
 Nav.propTypes = {
-    brand: PropTypes.string.isRequired
+    brand: PropTypes.string
 }
 

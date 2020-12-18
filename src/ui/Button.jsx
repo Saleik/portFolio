@@ -2,6 +2,7 @@ import React from "react"
 import propTypes from "prop-types"
 import styled from 'styled-components'
 import { colorsTheme } from './colorsTheme'
+import { Loader } from "./Loader"
 
 const CstButton = styled.button`
         color:${colorsTheme.secondary};
@@ -35,7 +36,7 @@ export function Button({ children, type = 'outline-primary', loading = false, ..
         htmlType = 'submit'
     }
     return <CstButton className={className} type={htmlType} disabled={loading}{...props}>
-        {children}
+        {loading ? <><Loader size="sm" /> envoi...</> : children}
     </CstButton>
 }
 
