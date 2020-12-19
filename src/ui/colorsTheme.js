@@ -4,7 +4,7 @@ import bgContact from '../images/contact.png'
 import portrait from '../images/portrait.png'
 
 export const colorsTheme = {
-    primary: '#02a2f0',
+    primary: '#00b1f1',
     secondary: '#ecb159',
 }
 

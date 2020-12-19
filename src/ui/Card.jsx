@@ -6,11 +6,11 @@ const CstI = styled.i`
     color: ${colorsTheme.primary};`
 
 const CstH4 = styled.h5`
-    font-family:'Oswald-bold', sans-serif;
+    font-family:'Oswald', sans-serif;
     font-weight: 800;
     `
 const CstH6 = styled.h6`
-        font-family: 'Oswald-bold', sans-serif;
+        font-family: 'Oswald', sans-serif;
         color: #42b7ff;`
 
 const CstP = styled.p`

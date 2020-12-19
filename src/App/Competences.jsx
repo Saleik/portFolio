@@ -19,7 +19,7 @@ const CstDiv = styled.div`
         height:70vh;
     `
 const CstH4 = styled.h4`
-    font-family: 'Oswald-bold', sans-serif;
+    font-family: 'Oswald', sans-serif;
     `
 
 export const Competences = () => {

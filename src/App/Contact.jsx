@@ -6,7 +6,8 @@ import { bgContact, colorsTheme } from '../ui/colorsTheme'
 import { Footer } from './components/Footer'
 import { Title } from '../ui/Title'
 import { RecaptchaForm } from '../ui/RecaptchaForm'
-import { EmailStatus } from './components/EmailStatus'
+import { Modal } from '../ui/Modal'
+import { useModal } from '../hooks/index'
 
 const CstP = styled.p`
         font-family:'Dosis', sans-serif;
@@ -18,13 +19,14 @@ export const Contact = () => {
         isVerified: false,
         recaptchaLoaded: false,
     })
-    const [emailStatus, setEmailStatus] = useState(null)
+    const [emailSuccess, setEmailSuccess] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
 
     const recaptchaLoaded = () => {
         setState(state => ({ ...state, recaptchaLoaded: true }))
     }
+    const [modal, setModal] = useModal(false)
 
     const verifiedRecaptcha = (response) => {
         if (response) {
@@ -34,27 +36,30 @@ export const Contact = () => {
 
     const handleSubmit = (e) => {
         const { isVerified, recaptchaLoaded } = state
+        const form = e.target
+
         e.preventDefault();
-        setLoading(true)
         setError(false)
 
         if (recaptchaLoaded && isVerified) {
-            setTimeout(() => {
-                setLoading(false)
-                setEmailStatus(true)
-            }, 2000)
-
-            /* emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE, process.env.REACT_APP_EMAIL_JS_TEMPLATE, e.target, process.env.REACT_APP_EMAIL_JS_USER_ID)
+            setLoading(true)
+            emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE, process.env.REACT_APP_EMAIL_JS_TEMPLATE, e.target, process.env.REACT_APP_EMAIL_JS_USER_ID)
                 .then((result) => {
-                    if (result.text === 'ok') {
-                        setState(state => ({ ...state, success: true }))
+                    if (result.text === 'OK') {
+                        setEmailSuccess(true)
+                        form.reset()
+                    } else {
+                        setEmailSuccess(false)
                     }
-                    console.log(result.txt)
+                    setLoading(false)
+                    setModal(true)
                 }, (error) => {
-                    console.log(error.text);
-                }) */
+                    setEmailSuccess(false)
+                    setLoading(false)
+                    setModal(true)
+                    console.error(error.txt)
+                })
         } else {
-            setLoading(false)
             setError(true)
         }
 
@@ -70,9 +75,8 @@ export const Contact = () => {
             <div className="row pt-2">
                 <div className="col-md-10 offset-md-1">
                     {error && <Alert>Merci de valider le reCAPTCHA svp</Alert>}
-                    {emailStatus === null ?
-                        <RecaptchaForm onSubmit={handleSubmit} onloadCallback={recaptchaLoaded} verifyCallback={verifiedRecaptcha} loading={loading} />
-                        : <EmailStatus />}
+                    <RecaptchaForm onSubmit={handleSubmit} onloadCallback={recaptchaLoaded} verifyCallback={verifiedRecaptcha} loading={loading} />
+                    {modal !== false ? <Modal onClose={setModal} success={emailSuccess} /> : ''}
                 </div>
             </div>
             <Footer />
