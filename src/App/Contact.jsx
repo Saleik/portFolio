@@ -67,8 +67,8 @@ export const Contact = () => {
     return <Section id="contact" background={bgContact} >
         <div className="container">
             <div className="row">
-                <div className="col-md-12">
-                    <Title color={colorsTheme.secondary}>Start a project</Title>
+                <div className="col-md-12 text-center">
+                    <Title fontSize="1.7em" color={colorsTheme.secondary}>Start a project</Title>
                     <CstP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit sit porro modi.</CstP>
                 </div>
             </div>

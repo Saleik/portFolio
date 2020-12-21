@@ -38,7 +38,7 @@ export function Modal({ success, onClose }) {
 
 Modal.propTypes = {
     success: PropTypes.bool.isRequired,
-    onClose: PropTypes.func
+    onClose: PropTypes.func.isRequired
 }
 
 const CstI = styled.i`

@@ -1,17 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colorsTheme } from './colorsTheme'
+import { Title } from './Title'
+
 const CstI = styled.i`
     font-size:5rem;
     color: ${colorsTheme.primary};`
-
-const CstH4 = styled.h5`
-    font-family:'Oswald', sans-serif;
-    font-weight: 800;
-    `
-const CstH6 = styled.h6`
-        font-family: 'Oswald', sans-serif;
-        color: #42b7ff;`
 
 const CstP = styled.p`
     font-family: 'Dosis', sans-serif;
@@ -31,10 +25,10 @@ const CstDiv = styled.div`
 export const Card = props => {
     return <CstDiv title={props.title} className="col-md-4 text-center">
         <CstI className={`fas fa-${props.name} mt-2`} />
-        <CstH4 className="my-2">{props.title}</CstH4>
+        <Title className="my-2">{props.title}</Title>
         {props.name !== "tools" ? <>
             <CstP>{props.children}</CstP>
-            <CstH6>Langages:</CstH6>
+            <Title fontSize="1em" fontWeight="400" color="#42b7ff">Langages:</Title>
             <CstP>{props.languages}</CstP>
         </>
             :

@@ -5,15 +5,21 @@ import PropTypes from 'prop-types'
 const CstH1 = styled.h1`
   color: ${props => props.color};
   font-family: ${props => props.fontFamily ? props.fontFamily : 'Oswald'}, sans-serif;
-  font-weight: 800;`;
-export function Title({ color = "black", children, fontFamily }) {
-  return <CstH1 fontFamily={fontFamily} color={color}>{children}</CstH1>
+  font-weight: ${props => props.fontWeight ? props.fontWeight : '800'};
+  font-size: ${props => props.fontSize ? props.fontSize : '1.38em'};
+  white-space: normal;
+  word-break: break-all;`
+
+export function Title({ color = "black", children, fontFamily, fontSize, fontWeight, ...props}) {
+  return <CstH1 fontSize={fontSize} fontFamily={fontFamily} fontWeight={fontWeight} color={color} {...props}>{children}</CstH1>
 }
 
 Title.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string,
-  fontStyle: PropTypes.string
+  fontFamily: PropTypes.string,
+  fontSize: PropTypes.string,
+  fontWeight:PropTypes.string
 }
 
 

@@ -24,7 +24,7 @@ export const QuiSuisJe = () => {
         <div className="container">
             <CstDiv className="row align-items-center">
                 <div className="col-md-12 text-center">
-                    <Title fontFamily="Hammersmith One">Développeur Front-end, Junior</Title>
+                    <Title fontSize="2em" fontFamily="Hammersmith One">Développeur Front-end, Junior</Title>
                     <CstP>lorem je sais pas mais toi peut etre que non</CstP>
                     <CstImg className="img-fluid" src={portrait} alt="portrait" />
                 </div>

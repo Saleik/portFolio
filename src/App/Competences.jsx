@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { bgCompetences } from '../ui/colorsTheme'
 import { Section } from '../ui/Section'
 import { Card } from '../ui/Card'
+import { Title } from '../ui/Title'
 
 const BorderCards = styled.div`
         border: solid 1px lightgray;
@@ -18,9 +19,6 @@ const Me = styled.div`
 const CstDiv = styled.div`
         height:70vh;
     `
-const CstH4 = styled.h4`
-    font-family: 'Oswald', sans-serif;
-    `
 
 export const Competences = () => {
     return <Section background={bgCompetences}>
@@ -29,7 +27,7 @@ export const Competences = () => {
                 <div className="col-md-12">
                     <div className="row">
                         <Me className="col-md-12 text-center">
-                            <CstH4>Hi! I'm Kevin. Nice to meet you!</CstH4>
+                            <Title fontWeight="400" color="white">Hi! I'm Kevin. Nice to meet you!</Title>
                             <p>
                                 Lorem ipsum dolor sit amet  consectetur adipisicing elit. Beatae ipsum illo deleniti quos hic? Quidem dolore minima nesciunt ipsum eum labore iste, in itaque sit, inventore quo aliquid laboriosam quaerat!
                          </p>
