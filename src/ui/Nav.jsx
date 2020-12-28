@@ -7,14 +7,12 @@ const CstNav = styled.nav`
     border-bottom: 1px solid lightgrey;
     box-shadow: 0px 1px 2px lightgray;`
 
-export function Nav({ brand = "test" }) {
-    return <CstNav className="navbar">
-        <a className="navbar-brand" href="/test">
-            <h4>
-                {brand}
-            </h4>
+export function Nav({ brand}) {
+    return <CstNav className="navbar py-0">
+        <a className="ml-2 navbar-brand" href="/test">
+            <img className="img-fluid w-50" src={brand} alt="logo"/>
         </a>
-        <a href="#contact"><Button>Dite Bonjour</Button></a>
+        <a  className="mr-2" href="#contact"><Button>Dite Bonjour</Button></a>
     </CstNav>
 }
 Nav.propTypes = {

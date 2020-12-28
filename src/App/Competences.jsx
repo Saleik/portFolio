@@ -17,7 +17,9 @@ const Me = styled.div`
     font-weight: 300;
 `
 const CstDiv = styled.div`
-        height:70vh;
+        @media screen and (min-width: 768px){
+            height:70vh;
+        }
     `
 
 export const Competences = () => {
@@ -36,13 +38,13 @@ export const Competences = () => {
                 </div>
 
                 <BorderCards className="row mx-2">
-                    <Card name="desktop" title="Front-end" languages="HTML, CSS, JS, Reactjs">
+                    <Card icon="desktop" title="Front-end" subtitle="Langages" languages={['HTML', 'CSS', 'JS']}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
                     </Card>
-                    <Card name="code" title="Frameworks" languages="Bootstrap, Sass, Spring">
+                    <Card icon="code" title="Frameworks" subtitle="Librairies" languages={['Bootstrap', 'Sass', 'Spring', 'Styled-Components', 'Reactjs']}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
                     </Card>
-                    <Card name="tools" title="Outils" languages={['VScode', 'Github', 'Sourcetree', 'Terminal', 'Yarn', 'Webpack']}>
+                    <Card icon="tools" title="Outils" languages={['VScode', 'Github', 'Sourcetree', 'Terminal', 'Yarn', 'Webpack']}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
                     </Card>
                 </BorderCards>

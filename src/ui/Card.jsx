@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { colorsTheme } from './colorsTheme'
 import { Title } from './Title'
 
@@ -20,21 +21,35 @@ const CstUl = styled.ul`
 const CstDiv = styled.div`
     border: ${props => props.title !== 'Frameworks' ? 'none' : '0.5px solid lightgrey'};
     border-top: none;
-    border-bottom: none;`
+    border-bottom: none;
+    @media screen and (max-width: 767px){
+        border: ${props => props.title !== 'Frameworks' ? 'none' : '0.5px solid lightgrey'};
+        border-right: none;
+        border-left: none; 
+    }
+    `
 
-export const Card = props => {
-    return <CstDiv title={props.title} className="col-md-4 text-center">
-        <CstI className={`fas fa-${props.name} mt-2`} />
-        <Title className="my-2">{props.title}</Title>
-        {props.name !== "tools" ? <>
-            <CstP>{props.children}</CstP>
-            <Title fontSize="1em" fontWeight="400" color="#42b7ff">Langages:</Title>
-            <CstP>{props.languages}</CstP>
+export const Card = ({title, icon, children, languages, subtitle}) => {
+
+    return <CstDiv title={title} className="col-md-4 text-center">
+        <CstI className={`fas fa-${icon} mt-2`} />
+        <Title className="my-2">{title}</Title>
+        {icon !== "tools" ? <>
+            <CstP>{children}</CstP>
+            <Title fontSize="1em" fontWeight="400" color="#42b7ff">{subtitle +':'}</Title>
+            <CstP>{languages.map((l,k) => k < (languages.length - 1) ? `${l}, `: `${l}`)}</CstP>
         </>
             :
-            <CstUl className="p-0">{props.languages.map((t, k) => <li key={`tools-${k}`} > {t}</li>)}</CstUl>
+            <CstUl className="p-0">{languages.map((t, k) => <li key={`tools-${k}`} > {t}</li>)}</CstUl>
 
         }
     </CstDiv >
 }
 
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    languages: PropTypes.array.isRequired,
+    subtitle: PropTypes.string
+}

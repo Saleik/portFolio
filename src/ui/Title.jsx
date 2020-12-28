@@ -6,11 +6,14 @@ const CstH1 = styled.h1`
   color: ${props => props.color};
   font-family: ${props => props.fontFamily ? props.fontFamily : 'Oswald'}, sans-serif;
   font-weight: ${props => props.fontWeight ? props.fontWeight : '800'};
-  font-size: ${props => props.fontSize ? props.fontSize : '1.38em'};
+  font-size: ${props => parseFloat(props.fontSize) > 1.38 || props.fontSize === undefined ? '1.38em' : props.fontSize};
   white-space: normal;
-  word-break: break-all;`
+  word-wrap: break-word;
+  @media (min-width:768px){
+   font-size: ${props => props.fontSize ? props.fontSize : '1.38em'};
+  }`
 
-export function Title({ color = "black", children, fontFamily, fontSize, fontWeight, ...props}) {
+export function Title({ color = "black", children, fontFamily, fontSize, fontWeight, ...props }) {
   return <CstH1 fontSize={fontSize} fontFamily={fontFamily} fontWeight={fontWeight} color={color} {...props}>{children}</CstH1>
 }
 
@@ -19,7 +22,7 @@ Title.propTypes = {
   color: PropTypes.string,
   fontFamily: PropTypes.string,
   fontSize: PropTypes.string,
-  fontWeight:PropTypes.string
+  fontWeight: PropTypes.string
 }
 
 

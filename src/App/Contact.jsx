@@ -7,7 +7,7 @@ import { Footer } from './components/Footer'
 import { Title } from '../ui/Title'
 import { RecaptchaForm } from '../ui/RecaptchaForm'
 import { Modal } from '../ui/Modal'
-import { useModal } from '../hooks/index'
+import { useModal } from '../hooks/useModal'
 
 const CstP = styled.p`
         font-family:'Dosis', sans-serif;
