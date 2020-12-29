@@ -29,7 +29,7 @@ export const Competences = () => {
                 <div className="col-md-12">
                     <div className="row">
                         <Me className="col-md-12 text-center">
-                            <Title fontWeight="400" color="white">Hi! I'm Kevin. Nice to meet you!</Title>
+                            <Title fontWeight="400" color="white">Salut! Moi c'est Kevin, heureux de vous rencontrer.</Title>
                             <p>
                                 Lorem ipsum dolor sit amet  consectetur adipisicing elit. Beatae ipsum illo deleniti quos hic? Quidem dolore minima nesciunt ipsum eum labore iste, in itaque sit, inventore quo aliquid laboriosam quaerat!
                          </p>
@@ -39,13 +39,13 @@ export const Competences = () => {
 
                 <BorderCards className="row mx-2">
                     <Card icon="desktop" title="Front-end" subtitle="Langages" languages={['HTML', 'CSS', 'JS']}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
+                        J’adore développer des projets à partir de zéro et leur
+                        donner vie dans le navigateur.
                     </Card>
                     <Card icon="code" title="Frameworks" subtitle="Librairies" languages={['Bootstrap', 'Sass', 'Spring', 'Styled-Components', 'Reactjs']}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
+                        Proposer un service toujours plus abouti, avec les technologies d'aujourd'hui et de demain, c'est mon credo.
                     </Card>
                     <Card icon="tools" title="Outils" languages={['VScode', 'Github', 'Sourcetree', 'Terminal', 'Yarn', 'Webpack']}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda debitis illum, quis at explicabo.
                     </Card>
                 </BorderCards>
             </CstDiv>

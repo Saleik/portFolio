@@ -29,15 +29,15 @@ const CstDiv = styled.div`
     }
     `
 
-export const Card = ({title, icon, children, languages, subtitle}) => {
+export const Card = ({ title, icon, children, languages, subtitle }) => {
 
     return <CstDiv title={title} className="col-md-4 text-center">
         <CstI className={`fas fa-${icon} mt-2`} />
         <Title className="my-2">{title}</Title>
         {icon !== "tools" ? <>
             <CstP>{children}</CstP>
-            <Title fontSize="1em" fontWeight="400" color="#42b7ff">{subtitle +':'}</Title>
-            <CstP>{languages.map((l,k) => k < (languages.length - 1) ? `${l}, `: `${l}`)}</CstP>
+            <Title fontSize="1em" fontWeight="400" color="#42b7ff">{subtitle + ':'}</Title>
+            <CstP>{languages.map((l, k) => k < (languages.length - 1) ? `${l}, ` : `${l}`)}</CstP>
         </>
             :
             <CstUl className="p-0">{languages.map((t, k) => <li key={`tools-${k}`} > {t}</li>)}</CstUl>
@@ -48,7 +48,7 @@ export const Card = ({title, icon, children, languages, subtitle}) => {
 
 Card.propTypes = {
     title: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
+    children: PropTypes.string,
     icon: PropTypes.string.isRequired,
     languages: PropTypes.array.isRequired,
     subtitle: PropTypes.string

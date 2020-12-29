@@ -3,7 +3,7 @@ import bgCompetences from '../images/competences.png'
 import bgContact from '../images/contact.png'
 import portrait from '../images/portrait.png'
 import seinenApp from '../images/full_metal_alchemist_II.png'
-import logo from '../images/logo1.svg'
+import logo from '../images/logo.svg'
 
 
 export const colorsTheme = {

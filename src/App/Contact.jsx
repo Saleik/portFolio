@@ -68,8 +68,9 @@ export const Contact = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-12 text-center">
-                    <Title fontSize="1.7em" color={colorsTheme.secondary}>Start a project</Title>
-                    <CstP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit sit porro modi.</CstP>
+                    <Title fontSize="1.7em" color={colorsTheme.secondary}>Démarrer une collaboration</Title>
+                    <CstP>Une idée ou encore besoin d'un soutien supplémentaire sur un développement ?
+                        Dans ce cas n'hésitez pas, contactez-moi.</CstP>
                 </div>
             </div>
             <div className="row pt-2">

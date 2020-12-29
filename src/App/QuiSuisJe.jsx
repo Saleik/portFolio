@@ -36,7 +36,7 @@ export const QuiSuisJe = () => {
             <CstDiv className="row align-items-center">
                 <div className="col-md-12 text-center">
                     <Title fontSize="2em" fontFamily="Hammersmith One">Développeur Front-end, Junior</Title>
-                    <CstP>lorem je sais pas mais toi peut etre que non</CstP>
+                    <CstP>Ma mission, coder ce que vous imaginez et ça c'est plutôt sympa.</CstP>
                     <CstImg className="img-fluid" src={portrait} alt="portrait" />
                 </div>
             </CstDiv>

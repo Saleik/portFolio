@@ -15,10 +15,6 @@ const CstSection = styled.section`
     }
     `
 
-/* const CstDiv = styled.div`
-        height: 30vh;
-    ` */
-
 export function Portfolio() {
     return <CstSection className="py-2 mb-5">
         <div className="container">

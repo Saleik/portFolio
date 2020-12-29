@@ -30,8 +30,7 @@ const CstFigcaption = styled(animated.figcaption)`
     opacity:0;
     `
 const CstSpan = styled.span`
-        font-size:.7em;`
-
+        font-size:.7rem;`
 export function ProjectCard({ img, children, name, state }) {
     const [isToggle, setToggle] = useState(false)
 
@@ -50,15 +49,17 @@ export function ProjectCard({ img, children, name, state }) {
     }
 
 
-    return <CstFigure className="mx-auto text-center">
-        <animated.img style={scale} className="figure-img h-100 img-fluid" src={img} alt="projet" />
-        <CstFigcaption onMouseLeave={handleChange} onMouseEnter={handleChange} style={focus} className="d-flex flex-column justify-content-center p-4">
-            <Title fontSize="1em" fontWeight="400" color="white">{children}</Title>
-            <div className="mx-auto">
-                <Button><CstSpan>En développement</CstSpan></Button>
-            </div>
-        </CstFigcaption>
-    </CstFigure>
+    return <>
+        <CstFigure className="mx-auto text-center">
+            <animated.img style={scale} className="figure-img h-100 img-fluid" src={img} alt="projet" />
+            <CstFigcaption onMouseLeave={handleChange} onMouseEnter={handleChange} style={focus} className="d-flex flex-column justify-content-center p-4">
+                <Title fontSize="1em" fontWeight="400" color="white">{children}</Title>
+                <div className="mx-auto">
+                    <Button><CstSpan>En développement</CstSpan></Button>
+                </div>
+            </CstFigcaption>
+        </CstFigure>
+    </>
 }
 
 ProjectCard.propTypes = {
