@@ -7,15 +7,11 @@ import { Title } from '../../ui/Title'
 
 const CstFigure = styled.figure`
     border-radius: 50%;
-    height: 30vh;
-    width: 30vh;
+    height: 15rem;
+    width: 15rem;
     overflow: hidden;
     position: relative;
     background-color:white;
-    @media screen and (max-width: 767px) and (orientation:landscape){
-        height: 50vh;
-        width: 50vh;
-    }
     `
 
 const CstFigcaption = styled(animated.figcaption)`

@@ -2,11 +2,11 @@
     font-family: 'Dosis';
     src: local('/src/fonts/Dosis-Regular.ttf') format('ttf');
 
+    font-family: 'Avenir';
+    src: local('/src/fonts/AvenirLTStd-Book.otf') format('otf');
+
     font-family: 'Oswald';
     src: local('/src/fonts/Oswald-VariableFont_wght.ttf') format('tff');
-
-    font-family: 'Hammersmith';
-    src: local('/src/fonts/hammersmithone-regular-webfont.woff') format('woff');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
@@ -18,7 +18,12 @@ html {
     text-size-adjust: 100%;
     padding: 0;
     margin: 0;
-} 
+
+}
+
+body {
+    font-size: 16px;
+}
 
 #g-recaptcha {
     display: inline-block;

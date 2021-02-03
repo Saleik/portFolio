@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
-import { Section } from '../ui/Section'
 import { bgContact, colorsTheme } from '../ui/colorsTheme'
-import { Footer } from './components/Footer'
 import { Title } from '../ui/Title'
 import { RecaptchaForm } from '../ui/RecaptchaForm'
 import { Modal } from '../ui/Modal'
 import { useModal } from '../hooks/useModal'
-
-const CstP = styled.p`
-        font-family:'Dosis', sans-serif;
-        font-weight: 300;`
+const CstSection = styled.section`
+    width: 100vw;
+    font-family:'Avenir', sans-serif;
+    background: url(${bgContact}) no-repeat center;
+    background-size: cover;
+    padding-bottom: 10rem;
+    @media screen and (min-width: 992px){
+        height:100vh;
+        padding-bottom: 5rem;
+    }
+    `
 
 export const Contact = () => {
 
@@ -64,13 +69,13 @@ export const Contact = () => {
         }
 
     }
-    return <Section id="contact" background={bgContact} >
-        <div className="container">
+    return <CstSection id="contact" background={bgContact} >
+        <div className="container mt-5">
             <div className="row">
                 <div className="col-md-12 text-center">
-                    <Title fontSize="1.7em" color={colorsTheme.secondary}>Démarrer une collaboration</Title>
-                    <CstP>Une idée ou encore besoin d'un soutien supplémentaire sur un développement ?
-                        Dans ce cas n'hésitez pas, contactez-moi.</CstP>
+                    <Title fontSize="1.7rem" color={colorsTheme.secondary}>Démarrer une collaboration</Title>
+                    <p>Une idée ou encore besoin d'un soutien supplémentaire sur un développement ?
+                        Dans ce cas n'hésitez pas, contactez-moi.</p>
                 </div>
             </div>
             <div className="row pt-2">
@@ -80,9 +85,8 @@ export const Contact = () => {
                     {modal !== false ? <Modal onClose={setModal} success={emailSuccess} /> : ''}
                 </div>
             </div>
-            <Footer />
         </div>
-    </Section>
+    </CstSection>
 }
 
 function Alert({ children }) {

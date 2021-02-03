@@ -5,14 +5,9 @@ import { seinenApp } from '../ui/colorsTheme'
 import { Title } from '../ui/Title'
 
 const CstSection = styled.section`
-    width:100%;
-    position: relative;
+    min-width:100vw;
     border-bottom: 1px solid lightgray;
     box-shadow: 0px 1px 2px lightgray;
-     margin-top:5em;
-    @media screen and (min-width: 768px){
-        margin-top: -5em;
-    }
     `
 
 export function Portfolio() {

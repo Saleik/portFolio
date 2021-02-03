@@ -6,11 +6,11 @@ const CstH1 = styled.h1`
   color: ${props => props.color};
   font-family: ${props => props.fontFamily ? props.fontFamily : 'Oswald'}, sans-serif;
   font-weight: ${props => props.fontWeight ? props.fontWeight : '800'};
-  font-size: ${props => parseFloat(props.fontSize) > 1.38 || props.fontSize === undefined ? '1.38em' : props.fontSize};
+  font-size: ${props => parseFloat(props.fontSize) > 1.38 || props.fontSize === undefined ? '1.38rem' : props.fontSize};
   white-space: normal;
   word-wrap: break-word;
   @media (min-width:768px){
-   font-size: ${props => props.fontSize ? props.fontSize : '1.38em'};
+   font-size: ${props => props.fontSize ? props.fontSize : '1.38rem'};
   }`
 
 export function Title({ color = "black", children, fontFamily, fontSize, fontWeight, ...props }) {

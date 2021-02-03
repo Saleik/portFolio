@@ -42,22 +42,22 @@ Modal.propTypes = {
 }
 
 const CstI = styled.i`
-    color:${props => props.success ? 'green' : "red"};
+    color:black;
     font-size:5rem;`
 
 const CstP = styled.p`
-    font-family: 'Dosis', sans-serif;`
+    font-family: 'Avenir', sans-serif;`
 
 function Success({ success }) {
     if (success) {
         return <div className="row">
             <div className="col-md-12">
                 <CstP>
-                    Votre message m'a bien été transmis, je reviens vers vous très bientôt.
+                    Votre message m'a bien été transmis, j'ai hâte de vous lire. Je reviens vers vous très bientôt.
                 </CstP>
             </div>
             <div className="col-md-12 text-center">
-                <CstI success={success} className="fas fa-smile-beam" />
+                <CstI success={success} className="far fa-smile" />
             </div>
         </div>
     } else {
@@ -68,7 +68,7 @@ function Success({ success }) {
                 </CstP>
             </div>
             <div className="col-md-12 text-center">
-                <CstI success={success} className="fas fa-frown" />
+                <CstI success={success} className="far fa-sad-tear" />
             </div>
         </div>
 

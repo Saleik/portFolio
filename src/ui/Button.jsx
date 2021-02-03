@@ -8,7 +8,7 @@ const CstButton = styled.button`
         color:${colorsTheme.secondary};
         border-color:${colorsTheme.secondary};
         border-radius:20px;
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Avenir', sans-serif;
         font-weight:400;
         &:hover{
             background-color:${colorsTheme.secondary}!important;

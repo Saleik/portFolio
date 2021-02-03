@@ -5,7 +5,11 @@ import { Button } from './Button'
 
 const CstNav = styled.nav`
     border-bottom: 1px solid lightgrey;
-    box-shadow: 0px 1px 2px lightgray;`
+    box-shadow: 0px 1px 2px lightgray;
+    @media screen and (min-width: 768px){
+        margin-bottom: 1rem;
+    }
+    `
 
 export function Nav({ brand}) {
     return <CstNav className="navbar py-0">
