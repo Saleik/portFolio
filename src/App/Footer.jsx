@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MadeWith } from '../App/components/MadeWith'
-import { Saying } from '../App/components/Saying'
-import { SocialNetwork } from '../App/components/SocialNetwork'
-import { colorsTheme } from './colorsTheme'
+import { MadeWith } from './components/MadeWith'
+import { Saying } from './components/Saying'
+import { SocialNetwork } from './components/SocialNetwork'
+import { colorsTheme } from '../ui/colorsTheme'
 
 
 const CstSection = styled.section`
