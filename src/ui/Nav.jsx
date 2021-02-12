@@ -10,13 +10,18 @@ const CstNav = styled.nav`
         margin-bottom: 1rem;
     }
     `
+const CstImg = styled.img`
+    width: 100%;
+    height:auto;
+    max-width: 50px;
+    `
 
-export function Nav({ brand}) {
+export function Nav({ brand }) {
     return <CstNav className="navbar py-0">
         <a className="ml-2 navbar-brand" href="/test">
-            <img className="img-fluid w-50" src={brand} alt="logo"/>
+            <CstImg className="img-fluid" src={brand} alt="logo" />
         </a>
-        <a  className="mr-2" href="#contact"><Button>Dite Bonjour</Button></a>
+        <a className="mr-2" href="#contact"><Button>Dite Bonjour</Button></a>
     </CstNav>
 }
 Nav.propTypes = {

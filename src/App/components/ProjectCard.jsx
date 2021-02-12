@@ -37,7 +37,7 @@ export function ProjectCard({ img, children, name, link = "#", progress = "En co
     const [isToggle, setToggle] = useState(false)
 
     const focus = useSpring({
-        opacity: isToggle ? 1 : 0,
+        opacity: isToggle ? .95 : 0,
         config: { duration: 250 }
     })
 
