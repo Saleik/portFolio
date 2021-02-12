@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ProjectCard } from './components/ProjectCard'
-import { seinenApp } from '../ui/colorsTheme'
+import { ecommerceApp, rhumeur } from '../ui/colorsTheme'
 import { Title } from '../ui/Title'
 
 const CstSection = styled.section`
@@ -13,10 +13,11 @@ const CstSection = styled.section`
 export function Portfolio() {
     return <CstSection className="py-2 mb-5">
         <div className="container">
-            <Title fontFamily="Hammersmith One" className="text-center">Projet récent:</Title>
+            <Title fontFamily="Hammersmith One" className="text-center">Projets récents:</Title>
             <div className="row">
-                <div className="col-md-12">
-                    <ProjectCard img={seinenApp}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</ProjectCard>
+                <div className="col-md-12 d-flex flex-wrap">
+                    <ProjectCard link="https://ks-ecommerce-app.herokuapp.com/" name="Ecommerce" progress="Visiter le site" img={ecommerceApp}>Lab site de vente en ligne façon Amazon</ProjectCard>
+                    <ProjectCard name="Rhumeur" img={rhumeur}>Migration site vitrine client vers Next.js</ProjectCard>
                 </div>
             </div>
         </div>

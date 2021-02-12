@@ -1,7 +1,4 @@
 @font-face {
-    font-family: 'Dosis';
-    src: local('/src/fonts/Dosis-Regular.ttf') format('ttf');
-
     font-family: 'Avenir';
     src: local('/src/fonts/AvenirLTStd-Book.otf') format('otf');
 

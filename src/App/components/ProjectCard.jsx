@@ -4,9 +4,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from '../../ui/Button'
 import { Title } from '../../ui/Title'
+import { colorsTheme } from '../../ui/colorsTheme'
 
 const CstFigure = styled.figure`
     border-radius: 50%;
+    border: solid 1px ${colorsTheme.secondary};
     height: 15rem;
     width: 15rem;
     overflow: hidden;
@@ -17,7 +19,7 @@ const CstFigure = styled.figure`
 const CstFigcaption = styled(animated.figcaption)`
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: ${colorsTheme.primary};
     position:absolute;
     top:0;
     left:0;
@@ -25,13 +27,17 @@ const CstFigcaption = styled(animated.figcaption)`
     right: 0;
     opacity:0;
     `
-const CstSpan = styled.span`
-        font-size:.7rem;`
-export function ProjectCard({ img, children, name, state }) {
+
+const CstP = styled.p`
+        color: white;
+        font-weight:lighter;
+        font-family: 'Avenir', sans-serif;
+    `
+export function ProjectCard({ img, children, name, link = "#", progress = "En cours" }) {
     const [isToggle, setToggle] = useState(false)
 
     const focus = useSpring({
-        opacity: isToggle ? .8 : 0,
+        opacity: isToggle ? 1 : 0,
         config: { duration: 250 }
     })
 
@@ -49,9 +55,12 @@ export function ProjectCard({ img, children, name, state }) {
         <CstFigure className="mx-auto text-center">
             <animated.img style={scale} className="figure-img h-100 img-fluid" src={img} alt="projet" />
             <CstFigcaption onMouseLeave={handleChange} onMouseEnter={handleChange} style={focus} className="d-flex flex-column justify-content-center p-4">
-                <Title fontSize="1em" fontWeight="400" color="white">{children}</Title>
+                <Title fontSize="1rem" fontWeight="400" color="white">{name}</Title>
+                <CstP>{children}</CstP>
                 <div className="mx-auto">
-                    <Button><CstSpan>En développement</CstSpan></Button>
+                    <a href={link}>
+                        <Button>{progress}</Button>
+                    </a>
                 </div>
             </CstFigcaption>
         </CstFigure>
@@ -62,5 +71,7 @@ ProjectCard.propTypes = {
     img: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired,
     state: PropTypes.bool,
-    name: PropTypes.string
+    name: PropTypes.string.isRequired,
+    progress: PropTypes.string,
+    link: PropTypes.string
 }

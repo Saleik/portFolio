@@ -9,13 +9,13 @@ const CstI = styled.i`
     color: ${colorsTheme.primary};`
 
 const CstP = styled.p`
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Avenir', sans-serif;
         font-weight:300;
     `
 
 const CstUl = styled.ul`
         list-style: none;
-        font-family: 'Dosis', sans-serif;
+        font-family: 'Avenir', sans-serif;
         font-weight:300;
      `
 const CstDiv = styled.div`

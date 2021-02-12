@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const CstLabel = styled.label`
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Avenir', sans-serif;
     font-weight: 400;
     color: darkgray;`
 
