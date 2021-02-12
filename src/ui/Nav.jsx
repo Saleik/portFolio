@@ -11,7 +11,7 @@ const CstNav = styled.nav`
     }
     `
 const CstImg = styled.img`
-    width: 100%;
+    width: 100px;
     height:auto;
     max-width: 50px;
     `
