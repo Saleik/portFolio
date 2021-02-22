@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from '../ui/Button'
 import { bgQuiSuisJe, colorsTheme, portrait } from '../ui/colorsTheme'
 import { Title } from '../ui/Title'
 
@@ -23,9 +24,9 @@ const CenterDiv = styled.div`
     }
     `
 const CstImg = styled.img`
-    width:15rem;
+    width:12rem;
     @media screen and (max-width: 767px) and (orientation: landscape){
-            width: 12rem;
+            width: 9rem;
         }    
     `
 
@@ -41,6 +42,10 @@ export const QuiSuisJe = () => {
                     <Title color={colorsTheme.primary} fontSize="2rem" fontFamily="Hammersmith One">Développeur Front-end, Junior</Title>
                     <CstP>Ma mission, coder ce que vous imaginez et ça c'est plutôt sympa.</CstP>
                     <CstImg className="img-fluid" src={portrait} alt="portrait" />
+                    <div className="mt-5">
+                        <a href="#portfolio"><Button>Mes projets</Button></a>
+                    </div>
+
                 </CenterDiv>
             </div>
         </div>

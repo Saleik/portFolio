@@ -11,7 +11,7 @@ const CstSection = styled.section`
     `
 
 export function Portfolio() {
-    return <CstSection className="py-2 mb-5">
+    return <CstSection id="portfolio" className="py-2 mb-5">
         <div className="container">
             <Title fontFamily="Hammersmith One" className="text-center">Projets récents:</Title>
             <div className="row">

@@ -18,7 +18,7 @@ const CstImg = styled.img`
 
 export function Nav({ brand }) {
     return <CstNav className="navbar py-0">
-        <a className="ml-2 navbar-brand" href="/test">
+        <a className="ml-2 navbar-brand" href="/">
             <CstImg className="img-fluid" src={brand} alt="logo" />
         </a>
         <a className="mr-2" href="#contact"><Button>Dite Bonjour</Button></a>
